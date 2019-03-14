@@ -17,8 +17,3 @@ class Employee:
 
 emp1 = Employee('Chris', 'Jennings', 50000)
 emp2 = Employee('Kate', 'Hamilton', 60000)
-
-
-print(emp1.pay)
-emp1.apply_raise()
-print(emp1.pay)
