@@ -4,6 +4,7 @@
     <list default="true" id="d840f703-fe38-4696-8443-7f0976d82cec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/worker.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/factory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+            <state relative-caret-position="-214">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -28,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/worker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -37,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_worker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="556">
               <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -46,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_factory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+            <state relative-caret-position="345">
+              <caret line="23" column="59" lean-forward="true" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -68,10 +69,10 @@
       <list>
         <option value="$PROJECT_DIR$/test_employee.py" />
         <option value="$PROJECT_DIR$/employee.py" />
-        <option value="$PROJECT_DIR$/worker.py" />
         <option value="$PROJECT_DIR$/test_worker.py" />
         <option value="$PROJECT_DIR$/test_factory.py" />
         <option value="$PROJECT_DIR$/factory.py" />
+        <option value="$PROJECT_DIR$/worker.py" />
       </list>
     </option>
   </component>
@@ -118,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_factory.TestFactory.test_item_placed_in_holding_area">
+  <component name="RunManager" selected="Python tests.Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse">
     <configuration name="Unittests for test_factory.TestEmployee" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="first_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,20 +131,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_factory.TestEmployee&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test_factory.TestFactory" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="first_test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_factory.TestFactory&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -189,7 +176,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_worker.TestWorker.test_worker_can_send_thingamajig_to_holding_area" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="first_test" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -199,17 +186,31 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_worker.TestWorker.test_worker_can_send_thingamajig_to_holding_area&quot;" />
+      <option name="_new_target" value="&quot;test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_worker.TestWorker.test_worker_can_accurately_check_holding_area" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="first_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_worker.TestWorker.test_worker_can_accurately_check_holding_area&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" />
         <item itemvalue="Python tests.Unittests for test_factory.TestFactory.test_item_placed_in_holding_area" />
+        <item itemvalue="Python tests.Unittests for test_worker.TestWorker.test_worker_can_accurately_check_holding_area" />
         <item itemvalue="Python tests.Unittests for test_factory.TestFactory.test_add_random_items_to_conveyor_belt" />
         <item itemvalue="Python tests.Unittests for test_factory.TestFactory.test_factory_can_add_item_to_conveyor_belt" />
-        <item itemvalue="Python tests.Unittests for test_factory.TestFactory" />
-        <item itemvalue="Python tests.Unittests for test_worker.TestWorker.test_worker_can_send_thingamajig_to_holding_area" />
       </list>
     </recent_temporary>
   </component>
@@ -227,35 +228,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_worker_TestWorker_test_worker_can_build_thingamajig - 2019.03.17 at 11h 49m 48s.xml">
-      <configuration name="Unittests for test_worker.TestWorker.test_worker_can_build_thingamajig" configurationId="tests" />
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_items_moved_from_belt_to_holding_area_and_reverse - 2019.03.17 at 13h 09m 38s.xml">
+      <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_worker_TestWorker_test_worker_can_build_thingamajig - 2019.03.17 at 11h 49m 52s.xml">
-      <configuration name="Unittests for test_worker.TestWorker.test_worker_can_build_thingamajig" configurationId="tests" />
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_items_moved_from_belt_to_holding_area_and_reverse - 2019.03.17 at 13h 11m 29s.xml">
+      <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_worker_TestWorker_test_worker_can_build_thingamajig - 2019.03.17 at 11h 50m 08s.xml">
-      <configuration name="Unittests for test_worker.TestWorker.test_worker_can_build_thingamajig" configurationId="tests" />
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_items_moved_from_belt_to_holding_area_and_reverse - 2019.03.17 at 13h 13m 17s.xml">
+      <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_worker_TestWorker_test_worker_can_send_thingamajig_to_holding_area - 2019.03.17 at 11h 53m 11s.xml">
-      <configuration name="Unittests for test_worker.TestWorker.test_worker_can_send_thingamajig_to_holding_area" configurationId="tests" />
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_items_moved_from_belt_to_holding_area_and_reverse - 2019.03.17 at 13h 15m 41s.xml">
+      <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory - 2019.03.17 at 11h 59m 05s.xml">
-      <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_items_moved_from_belt_to_holding_area_and_reverse - 2019.03.17 at 13h 17m 46s.xml">
+      <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_add_item_to_conveyor_belt - 2019.03.17 at 11h 59m 20s.xml">
-      <configuration name="Unittests for test_factory.TestFactory.test_factory_can_add_item_to_conveyor_belt" configurationId="tests" />
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_items_moved_from_belt_to_holding_area_and_reverse - 2019.03.17 at 13h 18m 19s.xml">
+      <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_add_random_items_to_conveyor_belt - 2019.03.17 at 11h 59m 22s.xml">
-      <configuration name="Unittests for test_factory.TestFactory.test_add_random_items_to_conveyor_belt" configurationId="tests" />
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_items_moved_from_belt_to_holding_area_and_reverse - 2019.03.17 at 13h 19m 22s.xml">
+      <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_item_placed_in_holding_area - 2019.03.17 at 11h 59m 30s.xml">
-      <configuration name="Unittests for test_factory.TestFactory.test_item_placed_in_holding_area" configurationId="tests" />
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_items_moved_from_belt_to_holding_area_and_reverse - 2019.03.17 at 13h 19m 26s.xml">
+      <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_item_placed_in_holding_area - 2019.03.17 at 11h 59m 48s.xml">
-      <configuration name="Unittests for test_factory.TestFactory.test_item_placed_in_holding_area" configurationId="tests" />
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_items_moved_from_belt_to_holding_area_and_reverse - 2019.03.17 at 13h 19m 29s.xml">
+      <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_item_placed_in_holding_area - 2019.03.17 at 12h 01m 21s.xml">
-      <configuration name="Unittests for test_factory.TestFactory.test_item_placed_in_holding_area" configurationId="tests" />
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_items_moved_from_belt_to_holding_area_and_reverse - 2019.03.17 at 13h 19m 32s.xml">
+      <configuration name="Unittests for test_factory.TestFactory.test_items_moved_from_belt_to_holding_area_and_reverse" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -272,7 +273,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32928312" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32928312" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.399757" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -282,27 +283,24 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/worker.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/contextlib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="351">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_worker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="556">
           <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_factory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -311,10 +309,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/factory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+        <state relative-caret-position="-214">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/worker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="59" lean-forward="true" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,5 +1,6 @@
 import unittest
 from factory import Factory
+from worker import Worker
 
 
 class TestFactory(unittest.TestCase):
@@ -22,3 +23,9 @@ class TestFactory(unittest.TestCase):
         factory.check_object_at_position_zero()
         self.assertEqual(factory.holding_area.__len__(), 1)
 
+    def test_items_moved_from_belt_to_holding_area_and_reverse(self):
+        factory = Factory()
+        factory.add_random_items_to_conveyor_belt()
+        factory.check_object_at_position_zero()
+        factory.worker_assessment_of_holding_area()
+        self.assertEqual(factory.conveyor_belt.__len__(), 10)
