@@ -22,7 +22,3 @@ class TestFactory(unittest.TestCase):
         factory.check_object_at_position_zero()
         self.assertEqual(factory.holding_area.__len__(), 1)
 
-    def test_conveyor_belt_can_run(self):
-        factory = Factory()
-        factory.run_conveyor_belt()
-        self.assertEqual(factory.worker.__len__(), 3)
