@@ -19,6 +19,12 @@ class TestWorker(unittest.TestCase):
         worker.check_item_in_holding_area("widget")
         self.assertEqual(worker.basket.__len__(), 2)
 
+    def test_items_ready_for_build(self):
+        worker = Worker()
+        worker.check_item_in_holding_area("wotsit")
+        worker.check_item_in_holding_area("widget")
+        self.assertEqual(worker.check_items_ready_for_build(), True)
+
     def test_worker_can_build_thingamajig(self):
         worker = Worker()
         worker.check_item_in_holding_area("wotsit")
