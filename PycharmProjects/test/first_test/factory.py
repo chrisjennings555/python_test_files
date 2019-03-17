@@ -1,11 +1,12 @@
 import random
+from worker import Worker
 
 
 class Factory:
 
     def __init__(self):
         self.conveyor_belt = []
-        self.worker = []
+        self.worker = Worker
         self.holding_area = []
 
     def add_to_conveyor_belt(self, item):
@@ -17,7 +18,7 @@ class Factory:
             if x == 1:
                 self.conveyor_belt.append("wotsit")
             elif x == 2:
-                self.conveyor_belt.append("thingy")
+                self.conveyor_belt.append("widget")
             elif x == 0:
                 self.conveyor_belt.append("empty")
 
@@ -29,23 +30,15 @@ class Factory:
     def check_object_at_position_zero(self):
         if self.conveyor_belt[0] == "wotsit":
             self.add_item_to_holding_area(self.conveyor_belt.pop(0))
-        elif self.conveyor_belt[0] == 'thingy':
+        elif self.conveyor_belt[0] == 'widget':
             self.add_item_to_holding_area(self.conveyor_belt.pop(0))
         elif self.conveyor_belt[0] == "empty":
             pass
 
-    def check_wotsit_not_in_basket(self, wotsit):
-        if "wotsit" not in self.worker:
-            self.worker.append(wotsit)
-
-    def check_thingy_not_in_basket(self, thingy):
-        if "thingy" not in self.worker:
-            self.worker.append(thingy)
-
     def add_item_to_worker_basket(self):
         if self.holding_area.__len__() == 1:
             new_item = self.holding_area.pop()
-            self.worker.append(new_item)
+            self.worker.add_item_to_basket(new_item)
         else:
             pass
 
