@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d840f703-fe38-4696-8443-7f0976d82cec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dump.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_worker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/worker.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/factory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
+            <state relative-caret-position="164">
+              <caret line="141" column="52" lean-forward="true" selection-start-line="141" selection-start-column="52" selection-end-line="141" selection-end-column="52" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -38,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/worker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="384">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -83,8 +78,8 @@
         <option value="$PROJECT_DIR$/employee.py" />
         <option value="$PROJECT_DIR$/dump.py" />
         <option value="$PROJECT_DIR$/test_worker.py" />
-        <option value="$PROJECT_DIR$/worker.py" />
         <option value="$PROJECT_DIR$/test_factory.py" />
+        <option value="$PROJECT_DIR$/worker.py" />
         <option value="$PROJECT_DIR$/factory.py" />
       </list>
     </option>
@@ -241,34 +236,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 10h 58m 47s.xml">
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 33m 25s.xml">
       <configuration name="Unittests for test_factory.TestFactory.test_factory_can_run" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 10h 59m 51s.xml">
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 33m 43s.xml">
       <configuration name="Unittests for test_factory.TestFactory.test_factory_can_run" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 07m 20s.xml">
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 33m 53s.xml">
       <configuration name="Unittests for test_factory.TestFactory.test_factory_can_run" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 08m 24s.xml">
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 34m 08s.xml">
       <configuration name="Unittests for test_factory.TestFactory.test_factory_can_run" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 19m 02s.xml">
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 36m 02s.xml">
       <configuration name="Unittests for test_factory.TestFactory.test_factory_can_run" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 19m 56s.xml">
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 36m 06s.xml">
       <configuration name="Unittests for test_factory.TestFactory.test_factory_can_run" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 22m 24s.xml">
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 38m 22s.xml">
       <configuration name="Unittests for test_factory.TestFactory.test_factory_can_run" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 22m 59s.xml">
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 39m 27s.xml">
       <configuration name="Unittests for test_factory.TestFactory.test_factory_can_run" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 23m 05s.xml">
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 39m 47s.xml">
       <configuration name="Unittests for test_factory.TestFactory.test_factory_can_run" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 23m 08s.xml">
+    <history-entry file="Unittests_for_test_factory_TestFactory_test_factory_can_run - 2019.03.19 at 11h 39m 58s.xml">
       <configuration name="Unittests for test_factory.TestFactory.test_factory_can_run" configurationId="tests" />
     </history-entry>
   </component>
@@ -337,20 +332,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/factory.py">
+    <entry file="file://$PROJECT_DIR$/worker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="384">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/worker.py">
+    <entry file="file://$PROJECT_DIR$/factory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="164">
+          <caret line="141" column="52" lean-forward="true" selection-start-line="141" selection-start-column="52" selection-end-line="141" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

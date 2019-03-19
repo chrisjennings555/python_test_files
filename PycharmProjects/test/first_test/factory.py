@@ -23,7 +23,7 @@ class Factory:
 
 # adds random items either wotsit, widget or empty to the conveyor belt
     def add_random_items_to_conveyor_belt(self):
-        for i in range(0, 99):
+        for i in range(0, 100):
             x = random.randint(0, 2)
             if x == 1:
                 self.add_to_conveyor_belt("wotsit")
@@ -42,36 +42,42 @@ class Factory:
     def worker1_places_thingamajig_onto_conveyor_belt(self):
         if self.conveyor_belt[0] == "empty":
             if self.worker1.basket.__contains__("thingamajig"):
+                self.conveyor_belt.pop(0)
                 self.conveyor_belt.insert(0, self.worker1.basket.pop())
 
 # assesses conveyor belt and worker2 basket and places thingamajig if appropriate
     def worker2_places_thingamajig_onto_conveyor_belt(self):
         if self.conveyor_belt[0] == "empty":
             if self.worker2.basket.__contains__("thingamajig"):
+                self.conveyor_belt.pop(0)
                 self.conveyor_belt.insert(0, self.worker2.basket.pop())
 
 # assesses conveyor belt and worker3 basket and places thingamajig if appropriate
     def worker3_places_thingamajig_onto_conveyor_belt(self):
         if self.conveyor_belt[0] == "empty":
             if self.worker3.basket.__contains__("thingamajig"):
+                self.conveyor_belt.pop(0)
                 self.conveyor_belt.insert(0, self.worker3.basket.pop())
 
 # assesses conveyor belt and worker4 basket and places thingamajig if appropriate
     def worker4_places_thingamajig_onto_conveyor_belt(self):
         if self.conveyor_belt[0] == "empty":
             if self.worker4.basket.__contains__("thingamajig"):
+                self.conveyor_belt.pop(0)
                 self.conveyor_belt.insert(0, self.worker4.basket.pop())
 
 # assesses conveyor belt and worker5 basket and places thingamajig if appropriate
     def worker5_places_thingamajig_onto_conveyor_belt(self):
         if self.conveyor_belt[0] == "empty":
             if self.worker5.basket.__contains__("thingamajig"):
+                self.conveyor_belt.pop(0)
                 self.conveyor_belt.insert(0, self.worker5.basket.pop())
 
 # assesses conveyor belt and worker6 basket and places thingamajig if appropriate
     def worker6_places_thingamajig_onto_conveyor_belt(self):
         if self.conveyor_belt[0] == "empty":
             if self.worker6.basket.__contains__("thingamajig"):
+                self.conveyor_belt.pop(0)
                 self.conveyor_belt.insert(0, self.worker6.basket.pop())
 
 # worker1 inspects the item it is handed and then places something back onto the conveyor belt
@@ -132,7 +138,7 @@ class Factory:
 
 # main method to run the factory
     def run_factory(self):
-        for i in range(1, 100):
+        for i in range(0, 100):
             # worker1 does their magic with the item
             factory.worker1.check_items_ready_to_build_thingamajig()
             factory.worker1_places_thingamajig_onto_conveyor_belt()
@@ -164,6 +170,7 @@ class Factory:
 factory = Factory()
 
 factory.add_random_items_to_conveyor_belt()
+print("length of conveyor belt pre run", factory.conveyor_belt.__len__())
 factory.run_factory()
 factory.assess_recycling_bin()
 print("length of conveyor belt post run", factory.conveyor_belt.__len__())
