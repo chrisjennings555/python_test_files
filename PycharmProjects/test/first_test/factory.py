@@ -15,6 +15,7 @@ class Factory:
         self.worker5 = Worker()
         self.worker6 = Worker()
         self.recycling_bin = []
+        self.completed_thingamajigs = []
 
 # method to add an item to the conveyor belt
     def add_to_conveyor_belt(self, item):
@@ -123,11 +124,18 @@ class Factory:
 # the item at position zero on the conveyor belt is then sent to recycling after being inspected
     def dispose_of_item_at_position_zero(self):
         disposed_item = self.conveyor_belt.pop(0)
-        self.recycling_bin.append(disposed_item)
+        if disposed_item == "thingamajig":
+            self.completed_thingamajigs.append(disposed_item)
+        else:
+            self.recycling_bin.append(disposed_item)
 
-# uses built in python method to count the number of instances of something in a list
+# uses built in python method to count the number of instances of items in the recycling bin
     def assess_recycling_bin(self):
-        print("What's in the bin post run?", Counter(self.recycling_bin))
+        print("Contents of recycling bin post run =", Counter(self.recycling_bin))
+
+# uses built in python method to count the number of completed thingamajigs
+    def assess_completed_thingamajigs(self):
+        print("Number of completed thingamajigs =", self.completed_thingamajigs.__len__())
 
 # main method to run the factory
     def run_factory(self):
@@ -162,17 +170,9 @@ class Factory:
             factory.dispose_of_item_at_position_zero()
         print("length of conveyor belt post run =", factory.conveyor_belt.__len__())
         factory.assess_recycling_bin()
-
+        factory.assess_completed_thingamajigs()
 
 
 factory = Factory()
 
 factory.run_factory()
-
-# print(factory.conveyor_belt, "conveyor before")
-# factory.worker_places_thingamajig_onto_conveyor_belt()
-# factory.pass_inspected_item_to_worker_1()
-# print('worker1 basket', factory.worker1.basket)
-# factory.dispose_of_item_at_position_zero()
-# print("recycling", factory.recycling_bin)
-# print("conveyor post run", factory.conveyor_belt)

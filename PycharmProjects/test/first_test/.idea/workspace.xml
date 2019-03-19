@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d840f703-fe38-4696-8443-7f0976d82cec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_worker.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/factory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="134" column="48" selection-start-line="134" selection-start-column="48" selection-end-line="134" selection-end-column="48" />
+            <state relative-caret-position="242">
+              <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -238,18 +236,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_worker_TestWorker - 2019.03.19 at 12h 00m 29s.xml">
-      <configuration name="Unittests for test_worker.TestWorker" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory - 2019.03.19 at 12h 00m 48s.xml">
-      <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory - 2019.03.19 at 12h 01m 40s.xml">
-      <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_factory_TestFactory - 2019.03.19 at 12h 02m 21s.xml">
-      <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_test_factory_TestFactory - 2019.03.19 at 12h 02m 48s.xml">
       <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
     </history-entry>
@@ -266,6 +252,18 @@
       <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_for_test_factory_TestFactory - 2019.03.19 at 12h 11m 23s.xml">
+      <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_factory_TestFactory - 2019.03.19 at 12h 16m 30s.xml">
+      <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_factory_TestFactory - 2019.03.19 at 12h 18m 22s.xml">
+      <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_factory_TestFactory - 2019.03.19 at 12h 19m 29s.xml">
+      <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_factory_TestFactory - 2019.03.19 at 12h 20m 06s.xml">
       <configuration name="Unittests for test_factory.TestFactory" configurationId="tests" />
     </history-entry>
   </component>
@@ -343,8 +341,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/factory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="134" column="48" selection-start-line="134" selection-start-column="48" selection-end-line="134" selection-end-column="48" />
+        <state relative-caret-position="242">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
