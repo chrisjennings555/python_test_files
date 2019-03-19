@@ -1,4 +1,5 @@
 import random
+from collections import Counter
 from worker import Worker
 
 
@@ -6,7 +7,12 @@ class Factory:
 
     def __init__(self):
         self.conveyor_belt = []
-        self.worker = Worker()
+        self.worker1 = Worker()
+        self.worker2 = Worker()
+        self.worker3 = Worker()
+        self.worker4 = Worker()
+        self.worker5 = Worker()
+        self.worker6 = Worker()
         self.holding_area = []
         self.recycling_bin = []
         self.finished_products = []
@@ -17,7 +23,7 @@ class Factory:
 
 # adds random items either wotsit, widget or empty to the conveyor belt
     def add_random_items_to_conveyor_belt(self):
-        for i in range(0, 10):
+        for i in range(0, 99):
             x = random.randint(0, 2)
             if x == 1:
                 self.add_to_conveyor_belt("wotsit")
@@ -26,72 +32,148 @@ class Factory:
             elif x == 0:
                 self.add_to_conveyor_belt("empty")
 
-# puts first item from conveyor belt into holding area
-# FIRST METHOD CALLED
-    def move_item_at_position_zero_to_holding_area(self):
-        self.holding_area.append(self.conveyor_belt.pop(0))
+# takes the item at position zero and gives it to the worker
+    def get_item_at_position_zero_to_workers(self):
+        inspected_item = self.conveyor_belt.pop(0)
+        # print(inspected_item, "inspected item")
+        return inspected_item
 
-# worker checks if they need the item being held. holding area will be emptied
-# SECOND METHOD CALLED
-    def worker_assessment_of_holding_area(self):
-        self.worker.check_item_in_holding_area(self.holding_area.pop(0))
+# assesses conveyor belt and worker1 basket and places thingamajig if appropriate
+    def worker1_places_thingamajig_onto_conveyor_belt(self):
+        if self.conveyor_belt[0] == "empty":
+            if self.worker1.basket.__contains__("thingamajig"):
+                self.conveyor_belt.insert(0, self.worker1.basket.pop())
 
-# checks whether the holding area is empty - returns boolean
-# this method is called in replace_item_taken_from_holding_area_with_empty
-    def did_worker_take_item_from_holding_area(self):
-        return bool(self.holding_area.__len__() == 0)
+# assesses conveyor belt and worker2 basket and places thingamajig if appropriate
+    def worker2_places_thingamajig_onto_conveyor_belt(self):
+        if self.conveyor_belt[0] == "empty":
+            if self.worker2.basket.__contains__("thingamajig"):
+                self.conveyor_belt.insert(0, self.worker2.basket.pop())
 
-# will replace item taken from holding area with an empty
-# THIRD METHOD CALLED
-    def replace_item_taken_from_holding_area_with_empty(self):
-        if self.did_worker_take_item_from_holding_area():
-            self.holding_area.append("empty")
+# assesses conveyor belt and worker3 basket and places thingamajig if appropriate
+    def worker3_places_thingamajig_onto_conveyor_belt(self):
+        if self.conveyor_belt[0] == "empty":
+            if self.worker3.basket.__contains__("thingamajig"):
+                self.conveyor_belt.insert(0, self.worker3.basket.pop())
 
-# check to see if worker basket contains both items, clears the basket and populates with thingamajig
-# FOURTH METHOD CALLED
-    def worker_builds_thingamajig(self):
-        if self.worker.check_items_ready_for_build():
-            self.worker.basket.clear()
-            self.worker.basket.append("thingamajig")
-        else:
-            return "not ready"
+# assesses conveyor belt and worker4 basket and places thingamajig if appropriate
+    def worker4_places_thingamajig_onto_conveyor_belt(self):
+        if self.conveyor_belt[0] == "empty":
+            if self.worker4.basket.__contains__("thingamajig"):
+                self.conveyor_belt.insert(0, self.worker4.basket.pop())
 
-# sends created thingamajig to holding area
-# FIFTH METHOD CALLED - WILL ONLY EXECUTE IF WORKER BASKET CONTAINS THINGAMAJIG
-    def send_thingamajig_to_holding_area(self):
-        self.holding_area.append(self.worker.basket.pop(0))
+# assesses conveyor belt and worker5 basket and places thingamajig if appropriate
+    def worker5_places_thingamajig_onto_conveyor_belt(self):
+        if self.conveyor_belt[0] == "empty":
+            if self.worker5.basket.__contains__("thingamajig"):
+                self.conveyor_belt.insert(0, self.worker5.basket.pop())
 
-# put the item in the holding area back onto the conveyor belt
-# SIXTH METHOD CALLED
-    def put_item_in_holding_area_back_onto_conveyor_belt(self):
-        self.conveyor_belt.insert(0, self.holding_area.pop(0))
+# assesses conveyor belt and worker6 basket and places thingamajig if appropriate
+    def worker6_places_thingamajig_onto_conveyor_belt(self):
+        if self.conveyor_belt[0] == "empty":
+            if self.worker6.basket.__contains__("thingamajig"):
+                self.conveyor_belt.insert(0, self.worker6.basket.pop())
 
-# sends thingamajig to conveyor belt if the space at position zero is empty
-# SEVENTH METHOD CALLED - WILL ONLY EXECUTE IF HOLDING AREA CONTAINS THINGAMAJIG
-#     def send_completed_thingamajig_back_to_conveyor_belt(self):
-#         if self.holding_area.__contains__("thingamajig"):
-#             if self.conveyor_belt[0] == "empty":
-#                 self.conveyor_belt.pop(0)
-#                 self.conveyor_belt.insert(0, self.holding_area.pop(0))
+# worker1 inspects the item it is handed and then places something back onto the conveyor belt
+    def pass_inspected_item_to_worker_1(self):
+        item = self.get_item_at_position_zero_to_workers()
+        handled_item = self.worker1.does_worker_need_item(item)
+        # print(handled_item, "handled item")
+        self.place_item_back_onto_conveyor_at_position_zero(handled_item)
 
-# after checks are complete sends item at position 0 to finished products or recycling
-# EIGHTH METHOD CALLED
-    def send_to_recycling(self):
-        if self.conveyor_belt[0] is not "thingamajig":
-            self.recycling_bin.append(self.conveyor_belt.pop(0))
+# worker2 inspects the item it is handed and then places something back onto the conveyor belt
+    def pass_inspected_item_to_worker_2(self):
+        item = self.get_item_at_position_zero_to_workers()
+        handled_item = self.worker2.does_worker_need_item(item)
+        # print(handled_item, "handled item")
+        self.place_item_back_onto_conveyor_at_position_zero(handled_item)
 
-# perform all functions in running factory with one method
+# worker3 inspects the item it is handed and then places something back onto the conveyor belt
+    def pass_inspected_item_to_worker_3(self):
+        item = self.get_item_at_position_zero_to_workers()
+        handled_item = self.worker3.does_worker_need_item(item)
+        # print(handled_item, "handled item")
+        self.place_item_back_onto_conveyor_at_position_zero(handled_item)
+
+# worker4 inspects the item it is handed and then places something back onto the conveyor belt
+    def pass_inspected_item_to_worker_4(self):
+        item = self.get_item_at_position_zero_to_workers()
+        handled_item = self.worker4.does_worker_need_item(item)
+        # print(handled_item, "handled item")
+        self.place_item_back_onto_conveyor_at_position_zero(handled_item)
+
+# worker5 inspects the item it is handed and then places something back onto the conveyor belt
+    def pass_inspected_item_to_worker_5(self):
+        item = self.get_item_at_position_zero_to_workers()
+        handled_item = self.worker5.does_worker_need_item(item)
+        # print(handled_item, "handled item")
+        self.place_item_back_onto_conveyor_at_position_zero(handled_item)
+
+# worker6 inspects the item it is handed and then places something back onto the conveyor belt
+    def pass_inspected_item_to_worker_6(self):
+        item = self.get_item_at_position_zero_to_workers()
+        handled_item = self.worker6.does_worker_need_item(item)
+        # print(handled_item, "handled item")
+        self.place_item_back_onto_conveyor_at_position_zero(handled_item)
+
+# places the handles item back onto the conveyor belt
+# this method is called in pass_inspected_item_to_worker_1
+    def place_item_back_onto_conveyor_at_position_zero(self, item):
+        self.conveyor_belt.insert(0, item)
+
+# the item at position zero on the conveyor belt is then sent to recycling after being inspected
+    def dispose_of_item_at_position_zero(self):
+        disposed_item = self.conveyor_belt.pop(0)
+        self.recycling_bin.append(disposed_item)
+
+# uses built in python method to count the number of instances of something in a list
+    def assess_recycling_bin(self):
+        print("What's in the bin post run?", Counter(self.recycling_bin))
+
+# main method to run the factory
     def run_factory(self):
-        for i in range(0, 10):
-            self.move_item_at_position_zero_to_holding_area()
-            self.worker_assessment_of_holding_area()
-            self.replace_item_taken_from_holding_area_with_empty()
-            if self.worker_builds_thingamajig():
-                self.send_thingamajig_to_holding_area()
-                self.put_item_in_holding_area_back_onto_conveyor_belt()
-                # self.send_completed_thingamajig_back_to_conveyor_belt()
-            else:
-                self.put_item_in_holding_area_back_onto_conveyor_belt()
-            self.send_to_recycling()
+        for i in range(1, 100):
+            # worker1 does their magic with the item
+            factory.worker1.check_items_ready_to_build_thingamajig()
+            factory.worker1_places_thingamajig_onto_conveyor_belt()
+            factory.pass_inspected_item_to_worker_1()
+            # worker2 does their magic with the item
+            factory.worker2.check_items_ready_to_build_thingamajig()
+            factory.worker2_places_thingamajig_onto_conveyor_belt()
+            factory.pass_inspected_item_to_worker_2()
+            # worker3 does their magic with the item
+            factory.worker3.check_items_ready_to_build_thingamajig()
+            factory.worker3_places_thingamajig_onto_conveyor_belt()
+            factory.pass_inspected_item_to_worker_3()
+            # worker4 does their magic with the item
+            factory.worker4.check_items_ready_to_build_thingamajig()
+            factory.worker4_places_thingamajig_onto_conveyor_belt()
+            factory.pass_inspected_item_to_worker_4()
+            # worker5 does their magic with the item
+            factory.worker5.check_items_ready_to_build_thingamajig()
+            factory.worker5_places_thingamajig_onto_conveyor_belt()
+            factory.pass_inspected_item_to_worker_5()
+            # worker6 does their magic with the item
+            factory.worker6.check_items_ready_to_build_thingamajig()
+            factory.worker6_places_thingamajig_onto_conveyor_belt()
+            factory.pass_inspected_item_to_worker_6()
+            # factory then sends item into recycling
+            factory.dispose_of_item_at_position_zero()
 
 
+factory = Factory()
+
+factory.add_random_items_to_conveyor_belt()
+factory.run_factory()
+factory.assess_recycling_bin()
+print("length of conveyor belt post run", factory.conveyor_belt.__len__())
+print("finished conveyor belt", factory.conveyor_belt)
+
+
+# print(factory.conveyor_belt, "conveyor before")
+# factory.worker_places_thingamajig_onto_conveyor_belt()
+# factory.pass_inspected_item_to_worker_1()
+# print('worker1 basket', factory.worker1.basket)
+# factory.dispose_of_item_at_position_zero()
+# print("recycling", factory.recycling_bin)
+# print("conveyor post run", factory.conveyor_belt)

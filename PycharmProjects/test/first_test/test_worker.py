@@ -5,45 +5,25 @@ from worker import Worker
 class TestWorker(unittest.TestCase):
 
     def test_item_can_be_added_to_worker_basket(self):
-        worker = Worker()
+        worker = Worker(1)
         worker.add_item_to_basket("widget")
         self.assertEqual(worker.basket.__len__(), 1)
 
     def test_worker_can_accurately_check_holding_area(self):
-        worker = Worker()
-        worker.check_item_in_holding_area("wotsit")
-        worker.check_item_in_holding_area("empty")
-        worker.check_item_in_holding_area("empty")
-        worker.check_item_in_holding_area("wotsit")
-        worker.check_item_in_holding_area("widget")
-        worker.check_item_in_holding_area("widget")
+        worker = Worker(1)
+        worker.does_worker_need_item("wotsit")
+        worker.does_worker_need_item("empty")
+        worker.does_worker_need_item("empty")
+        worker.does_worker_need_item("wotsit")
+        worker.does_worker_need_item("widget")
+        worker.does_worker_need_item("widget")
         self.assertEqual(worker.basket.__len__(), 2)
 
     def test_items_ready_for_build(self):
-        worker = Worker()
-        worker.check_item_in_holding_area("wotsit")
-        worker.check_item_in_holding_area("widget")
-        self.assertEqual(worker.check_items_ready_for_build(), True)
+        worker = Worker(1)
+        worker.does_worker_need_item("wotsit")
+        worker.does_worker_need_item("widget")
+        self.assertEqual(worker.check_items_ready_to_build_thingamajig(), True)
 
-    def test_worker_can_build_thingamajig(self):
-        worker = Worker()
-        worker.check_item_in_holding_area("wotsit")
-        worker.check_item_in_holding_area("empty")
-        worker.check_item_in_holding_area("empty")
-        worker.check_item_in_holding_area("wotsit")
-        worker.check_item_in_holding_area("widget")
-        worker.check_item_in_holding_area("widget")
-        worker.build_thingamajig()
-        self.assertEqual(worker.basket.__contains__("thingamajig"), True)
 
-    def test_worker_can_send_thingamajig_to_holding_area(self):
-        worker = Worker()
-        worker.check_item_in_holding_area("wotsit")
-        worker.check_item_in_holding_area("empty")
-        worker.check_item_in_holding_area("empty")
-        worker.check_item_in_holding_area("wotsit")
-        worker.check_item_in_holding_area("widget")
-        worker.check_item_in_holding_area("widget")
-        worker.build_thingamajig()
-        worker.send_thingamajig_to_holding_area()
-        self.assertEqual(worker.basket.__len__(), 0)
+
