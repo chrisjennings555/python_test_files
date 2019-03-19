@@ -174,15 +174,10 @@ class Factory:
 # moves contents of slot 3 into relevant area - either recycling or completed
     def dispose_of_item_in_slot_3(self):
         disposed_item = self.slot3
-        if self.slot3 == "thingamajig":
+        if disposed_item == "thingamajig":
             self.completed_thingamajigs.append(disposed_item)
-        elif self.slot3 == "empty":
+        else:
             self.recycling_bin.append(disposed_item)
-        elif self.slot3 == "wotsit":
-            self.recycling_bin.append(disposed_item)
-        elif self.slot3 == "widget":
-            self.recycling_bin.append(disposed_item)
-
 
 # uses built in python method to count the number of instances of items in the recycling bin
     def assess_recycling_bin(self):
