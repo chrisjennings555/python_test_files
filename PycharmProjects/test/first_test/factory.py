@@ -6,6 +6,7 @@ from worker import Worker
 class Factory:
 
     def __init__(self):
+        self.number_of_items = 100
         self.conveyor_belt = []
         self.worker1 = Worker()
         self.worker2 = Worker()
@@ -13,9 +14,7 @@ class Factory:
         self.worker4 = Worker()
         self.worker5 = Worker()
         self.worker6 = Worker()
-        self.holding_area = []
         self.recycling_bin = []
-        self.finished_products = []
 
 # method to add an item to the conveyor belt
     def add_to_conveyor_belt(self, item):
@@ -23,7 +22,7 @@ class Factory:
 
 # adds random items either wotsit, widget or empty to the conveyor belt
     def add_random_items_to_conveyor_belt(self):
-        for i in range(0, 100):
+        for i in range(0, self.number_of_items):
             x = random.randint(0, 2)
             if x == 1:
                 self.add_to_conveyor_belt("wotsit")
@@ -84,42 +83,36 @@ class Factory:
     def pass_inspected_item_to_worker_1(self):
         item = self.get_item_at_position_zero_to_workers()
         handled_item = self.worker1.does_worker_need_item(item)
-        # print(handled_item, "handled item")
         self.place_item_back_onto_conveyor_at_position_zero(handled_item)
 
 # worker2 inspects the item it is handed and then places something back onto the conveyor belt
     def pass_inspected_item_to_worker_2(self):
         item = self.get_item_at_position_zero_to_workers()
         handled_item = self.worker2.does_worker_need_item(item)
-        # print(handled_item, "handled item")
         self.place_item_back_onto_conveyor_at_position_zero(handled_item)
 
 # worker3 inspects the item it is handed and then places something back onto the conveyor belt
     def pass_inspected_item_to_worker_3(self):
         item = self.get_item_at_position_zero_to_workers()
         handled_item = self.worker3.does_worker_need_item(item)
-        # print(handled_item, "handled item")
         self.place_item_back_onto_conveyor_at_position_zero(handled_item)
 
 # worker4 inspects the item it is handed and then places something back onto the conveyor belt
     def pass_inspected_item_to_worker_4(self):
         item = self.get_item_at_position_zero_to_workers()
         handled_item = self.worker4.does_worker_need_item(item)
-        # print(handled_item, "handled item")
         self.place_item_back_onto_conveyor_at_position_zero(handled_item)
 
 # worker5 inspects the item it is handed and then places something back onto the conveyor belt
     def pass_inspected_item_to_worker_5(self):
         item = self.get_item_at_position_zero_to_workers()
         handled_item = self.worker5.does_worker_need_item(item)
-        # print(handled_item, "handled item")
         self.place_item_back_onto_conveyor_at_position_zero(handled_item)
 
 # worker6 inspects the item it is handed and then places something back onto the conveyor belt
     def pass_inspected_item_to_worker_6(self):
         item = self.get_item_at_position_zero_to_workers()
         handled_item = self.worker6.does_worker_need_item(item)
-        # print(handled_item, "handled item")
         self.place_item_back_onto_conveyor_at_position_zero(handled_item)
 
 # places the handles item back onto the conveyor belt
@@ -138,7 +131,9 @@ class Factory:
 
 # main method to run the factory
     def run_factory(self):
-        for i in range(0, 100):
+        factory.add_random_items_to_conveyor_belt()
+        print("length of conveyor belt pre run =", factory.conveyor_belt.__len__())
+        for i in range(0, self.number_of_items):
             # worker1 does their magic with the item
             factory.worker1.check_items_ready_to_build_thingamajig()
             factory.worker1_places_thingamajig_onto_conveyor_belt()
@@ -165,17 +160,14 @@ class Factory:
             factory.pass_inspected_item_to_worker_6()
             # factory then sends item into recycling
             factory.dispose_of_item_at_position_zero()
+        print("length of conveyor belt post run =", factory.conveyor_belt.__len__())
+        factory.assess_recycling_bin()
+
 
 
 factory = Factory()
 
-factory.add_random_items_to_conveyor_belt()
-print("length of conveyor belt pre run", factory.conveyor_belt.__len__())
 factory.run_factory()
-factory.assess_recycling_bin()
-print("length of conveyor belt post run", factory.conveyor_belt.__len__())
-print("finished conveyor belt", factory.conveyor_belt)
-
 
 # print(factory.conveyor_belt, "conveyor before")
 # factory.worker_places_thingamajig_onto_conveyor_belt()
