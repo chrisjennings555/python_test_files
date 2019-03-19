@@ -35,7 +35,6 @@ class Factory:
 # takes the item at position zero and gives it to the worker
     def get_item_at_position_zero_to_workers(self):
         inspected_item = self.conveyor_belt.pop(0)
-        # print(inspected_item, "inspected item")
         return inspected_item
 
 # assesses conveyor belt and worker1 basket and places thingamajig if appropriate
