@@ -7,11 +7,19 @@ Workers can add items to their basket depending on an initial assessment of the 
 
 * The factory has a conveyor belt, 6 worker objects, a number of objects variable, a recycling bin and a "completed objects area"
 
-* The conveyor belt is populated with random items - "empty", "wotsit" and "widget"
+* The factory also has 3 "slots" that have an initial value of "empty" and these are used to populate the conveyor belt
 
-* Each worker can assess each item and decide whether to add it to their basket
+* Slot 1 is populated initially with a random item (empty, wotsit, widget) and it is inspected by worker1 and then worker2
 
-* When the worker collects a wotsit and a widget it can create a thingamajgig
+* The contents of slot 1 are then passed to slot 2 to be inspected by worker3 and worker4
+
+* Slot 1 in the mean time is repopulated with a random item to be inspected again by worker1 and worker2
+
+* After these assessments the item at slot 2 is passed to slot 3, the item at slot 1 is passed to slot 2 and slot 1 is repopulated with a random item
+
+* The assessment carried out by a worker calculates whether they need a specific item
+
+* When the worker collects a wotsit and a widget they wait until the belt has taken a step and they then create a thingamajgig
 
 * The worker must wait until there is an empty space on the conveyor belt to put it's completed thingamajig down at it's position
 
@@ -26,8 +34,8 @@ Workers can add items to their basket depending on an initial assessment of the 
 * To run from the command line use  ```python3 factory.py```
 
 * The run_factory method is called at the end of the file and will give the following output
-    * Populates conveyor belt with 100 random items
-    * Assesses each of the 100 items
+    * Generates 100 random items which are sent to slot 1 then passed along the conveyor belt
+    * Each item is assessed at slot 1 by workers 1 and 2, at slot 2 by workers 3 and 4, and at slot 3 by workers 5 and 6
     * Prints length of conveyor belt pre-run
     * Prints length of conveyor belt post-run
     * Prints contents of recycling bin post-run
