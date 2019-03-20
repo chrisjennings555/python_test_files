@@ -54,3 +54,5 @@ Workers can add items to their basket depending on an initial assessment of the 
 * If I were to refactor I would write a loop to replicate the behaviour of worker1 for each of the remaining 5 workers
 
 * The "Dump" file is where I pasted unwanted code that caused issues when the run_factory method was called. It gives an idea about the thought process I went through and where I initially went wrong
+
+* I did attempt writing loops to iterate over a list of workers but I couldn't get it to work! The code is located at the end of the rebuilt_factory file

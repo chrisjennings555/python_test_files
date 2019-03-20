@@ -1,7 +1,8 @@
 class Worker:
 
-    def __init__(self):
+    def __init__(self, assigned_slot):
         self.basket = []
+        self.assigned_slot = assigned_slot
 
 # adds an item to the worker basket
     def add_item_to_basket(self, item):

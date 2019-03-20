@@ -11,12 +11,13 @@ class Factory:
         self.slot1 = "empty"
         self.slot2 = "empty"
         self.slot3 = "empty"
-        self.worker1 = Worker()
-        self.worker2 = Worker()
-        self.worker3 = Worker()
-        self.worker4 = Worker()
-        self.worker5 = Worker()
-        self.worker6 = Worker()
+        self.worker1 = Worker(self.slot1)
+        self.worker2 = Worker(self.slot1)
+        self.worker3 = Worker(self.slot2)
+        self.worker4 = Worker(self.slot2)
+        self.worker5 = Worker(self.slot3)
+        self.worker6 = Worker(self.slot3)
+        self.worker_list = [self.worker1, self.worker2, self.worker3, self.worker4, self.worker5, self.worker6]
         self.recycling_bin = []
         self.completed_thingamajigs = []
 
@@ -187,26 +188,27 @@ class Factory:
     def assess_completed_thingamajigs(self):
         print("Number of completed thingamajigs =", self.completed_thingamajigs.__len__())
 
+# main method to call each method to run the factory for specified number of items
     def run_factory(self):
+
         factory.build_conveyor_belt()
 
         for i in range(0, factory.number_of_items):
-            # each worker first gets chance to assess that is in the slot in front of them
-            # if they cant pick up but have a thingamajig then it can be placed
+
             factory.worker1_assesses_item_in_slot_1()
-            factory.worker1_places_thingamajig_onto_conveyor_belt()
             factory.worker2_assesses_item_in_slot_1()
-            factory.worker2_places_thingamajig_onto_conveyor_belt()
             factory.worker3_assesses_item_in_slot_2()
-            factory.worker3_places_thingamajig_onto_conveyor_belt()
             factory.worker4_assesses_item_in_slot_2()
-            factory.worker4_places_thingamajig_onto_conveyor_belt()
             factory.worker5_assesses_item_in_slot_3()
-            factory.worker5_places_thingamajig_onto_conveyor_belt()
             factory.worker6_assesses_item_in_slot_3()
+
+            factory.worker1_places_thingamajig_onto_conveyor_belt()
+            factory.worker2_places_thingamajig_onto_conveyor_belt()
+            factory.worker3_places_thingamajig_onto_conveyor_belt()
+            factory.worker4_places_thingamajig_onto_conveyor_belt()
+            factory.worker5_places_thingamajig_onto_conveyor_belt()
             factory.worker6_places_thingamajig_onto_conveyor_belt()
 
-            # each worker gets opportunity to build their thingamajig if they have each item
             factory.worker1_checks_and_builds_thingamajig()
             factory.worker2_checks_and_builds_thingamajig()
             factory.worker3_checks_and_builds_thingamajig()
@@ -214,13 +216,11 @@ class Factory:
             factory.worker5_checks_and_builds_thingamajig()
             factory.worker6_checks_and_builds_thingamajig()
 
-            # the item at slot 3 is sent to appropriate place and everything is moved along 1 slot
             factory.dispose_of_item_in_slot_3()
             factory.move_slot2_to_slot3()
             factory.move_slot1_to_slot2()
             factory.add_random_item_to_slot_1()
 
-        # prints information about what is in the various end locations
         factory.assess_recycling_bin()
         factory.assess_completed_thingamajigs()
 
@@ -228,9 +228,30 @@ class Factory:
 factory = Factory()
 factory.run_factory()
 
-# print("recycling bin =", factory.recycling_bin)
-# print("worker1 basket =", factory.worker1.basket)
-# print("worker2 basket =", factory.worker2.basket)
-# print("post slot1 =", factory.slot1)
-# print("post slot2 =", factory.slot2)
-# print("post slot3 =", factory.slot3)
+###############################################################################################
+###############################################################################################
+###############################################################################################
+# METHODS THAT LOOP THROUGH EACH WORKER IN THE WORKER LIST BELOW THIS LINE
+###############################################################################################
+###############################################################################################
+###############################################################################################
+
+#
+# # loops through each worker to assess whether they need item at their designated slot
+#     def all_workers_check_if_they_need_item(self):
+#         for worker in self.worker_list:
+#             if worker.does_worker_need_item(worker.assigned_slot):
+#                 worker.add_item_to_basket(worker.assigned_slot)
+#                 worker.assigned_slot = "empty"
+#
+# # all workers check if they can build a thingamajig
+#     def all_workers_check_and_build_thingamajig(self):
+#         for worker in self.worker_list:
+#             worker.if_ready_build_thingamajig()
+#
+# # all workers check if they have thingamajig in basket and place onto conveyor if appropriate
+#     def all_workers_place_thingamajig_onto_conveyor_if_possible(self):
+#         for worker in self.worker_list:
+#             if worker.basket.__contains__("thingamajig"):
+#                 fresh_thingamajig = worker.basket.pop
+#                 worker.assigned_slot = fresh_thingamajig
